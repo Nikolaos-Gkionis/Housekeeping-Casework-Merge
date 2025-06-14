@@ -1165,7 +1165,7 @@ function renameDocument() {
           $('table#materials_table tr.rename_document td.title_column').prepend(`<strong class="govuk-tag govuk-tag--green">Renamed</strong>`);
 
 
-     }, 6000)
+     }, 1000)
     // var newDocumentName = $('#rename-Document').val();
     // $('.updated-message p strong').text(newDocumentName);
     // // $('.updated-message .info-text').text('Document has been renamed ' + newDocumentName);
@@ -1455,8 +1455,8 @@ function reclassifyCommsToUnused() {
  * Shows a success notification when reclassification is complete
  */
 function showReclassificationSuccess(type, count, items) {
-     // Hide any existing notifications
-     $('.govuk-notification-banner').hide();
+     // Remove any existing notification banners
+     $('.govuk-notification-banner').remove();
      
      // Create success message
      var itemText = count === 1 ? (type === 'materials' ? 'material' : 'communication') 
